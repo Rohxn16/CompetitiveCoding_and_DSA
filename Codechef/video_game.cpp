@@ -49,7 +49,6 @@ void operate(int arr[], int n, vector<int> ops, int h){
 	printArr(arr,n);
 
 }
-
 int main(int argc, char const *argv[]) {
 	int n,h;
 	cin >> n >> h;
