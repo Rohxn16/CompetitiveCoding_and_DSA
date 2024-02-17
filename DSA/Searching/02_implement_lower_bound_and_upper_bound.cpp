@@ -29,6 +29,10 @@ int main(int argc, char const *argv[])
 {
     vector<int> arr = {1,2,3,4,5,6,7,8,9};
     int ans = lowerBoundBinarySearch(arr,5);
-    cout << ans <<endl;    
+// upper bound is literally the same except >= is replaced by >
+// for c++ upper bound can be calculated using the stl in this way
+    auto ub = upper_bound(arr.begin(),arr.end(),5);
+    cout << ans <<endl;
+    cout << ub - arr.begin() << endl;
     return 0;
 }
