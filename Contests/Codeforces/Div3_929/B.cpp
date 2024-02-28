@@ -1,40 +1,54 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int check(vector<int>&arr, int sum){
-  if(sum % 3 == 0) return 0;
-  else{
-    // it can either be sum - a[i] or sum + 1
+#define ll long long
+#define pii pair<int, int>
+#define pll pair<long long, long long>
+#define vi vector<int>
+#define vll vector<long long>
 
-    if((sum + 1) % 3 == 0) return 1;
+// functions
+#define pb push_back
+#define pop pop_back
+#define in insert
+#define rem erase
 
-    for(int i : arr){
-      if((sum - i)%3 == 0) return 1;
-    }
-  }
-  return 2;
-}
-
-int main(int argc, char const *argv[])
-{
+// maybe i should write a simple function for this
+// bool find(vector<int> &arr, int n) {
+  // for (int i : arr) {
+    // if (i == n)
+      // return true;
+  // }
+  // return false;
+// }
+// 
+int main(int argc, char *argv[]) {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
   int t;
   cin >> t;
-  while(t--){
+  while (t--) {
+    // start here
+    // imma redo this shit
     int n;
     cin >> n;
+    vector<int> arr(n);
     int sum = 0;
 
-    vector<int> arr(n);
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
       int x;
       cin >> x;
       arr[i] = x;
+
       sum += x;
     }
 
- // stdin
-    int ans = check(arr,sum);
-    cout << ans <<endl;
+    if (sum % 3 == 0)
+      return 0;
+    else if ((sum + 1) % 3 == 0 || find(arr.begin(), arr.end(), (sum%3)) != arr.end())
+      cout << "1\n";
+    else
+      cout << "2\n";
   }
   return 0;
 }
