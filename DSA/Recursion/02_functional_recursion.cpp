@@ -40,6 +40,8 @@ int main(){
 	// cout << endl;
 	string s;
 	cin >> s;
-	if(palindrome(s,0)) cout <<"YES\n";
+	if(palindrome(s,0
+
+		)) cout <<"YES\n";
 	else cout << "NO\n";
 }
