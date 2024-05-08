@@ -1,0 +1,1 @@
+{"name":"Local: maps","url":"c:\\Users\\User\\Desktop\\ParidhiPrepCP\\STL\\maps.cpp","tests":[{"id":1713173407791,"input":"1\n4\n8 3\n9 2\n2 6\n7 8","output":"1 2\n3 4\n5 6\n7 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\ParidhiPrepCP\\STL\\maps.cpp","group":"local","local":true}
